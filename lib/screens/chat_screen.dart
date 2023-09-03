@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:messageme_app/constants/assets.dart';
+import 'package:messageme_app/constants/colors.dart';
+import 'package:messageme_app/constants/texts.dart';
 
 class ChatScreen extends StatefulWidget {
   static const String nameRoute = "chat_screen";
@@ -13,12 +16,12 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.yellow[900],
+        backgroundColor: AppColors.yellow[900],
         title: Row(
           children: [
-            Image.asset('images/logo.png', height: 25),
+            Image.asset(AppAssets.logo, height: 25),
             SizedBox(width: 10),
-            Text('MessageMe')
+            Text(AppTexts.nameApp)
           ],
         ),
         actions: [
@@ -40,7 +43,7 @@ class _ChatScreenState extends State<ChatScreen> {
               decoration: BoxDecoration(
                 border: Border(
                   top: BorderSide(
-                    color: Colors.orange,
+                    color: AppColors.orange,
                     width: 2,
                   ),
                 ),
@@ -56,7 +59,7 @@ class _ChatScreenState extends State<ChatScreen> {
                           vertical: 10,
                           horizontal: 20,
                         ),
-                        hintText: 'Write your message here...',
+                        hintText: AppTexts.hintTextMessage,
                         border: InputBorder.none,
                       ),
                     ),
@@ -64,9 +67,9 @@ class _ChatScreenState extends State<ChatScreen> {
                   TextButton(
                     onPressed: () {},
                     child: Text(
-                      'send',
+                      AppTexts.send,
                       style: TextStyle(
-                        color: Colors.blue[800],
+                        color: AppColors.blue[800],
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                       ),

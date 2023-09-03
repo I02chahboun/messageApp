@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:messageme_app/constants/colors.dart';
 
 class MyButton extends StatelessWidget {
   MyButton({required this.color, required this.title, required this.onPressed});
@@ -21,7 +22,7 @@ class MyButton extends StatelessWidget {
           height: 42,
           child: Text(
             title,
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: AppColors.white),
           ),
         ),
       ),

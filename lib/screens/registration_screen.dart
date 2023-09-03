@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:messageme_app/constants/assets.dart';
+import 'package:messageme_app/constants/colors.dart';
+import 'package:messageme_app/constants/texts.dart';
 import 'package:messageme_app/widgets/my_button.dart';
+import 'package:messageme_app/widgets/my_text_field.dart';
 
 class RegistrationScreen extends StatefulWidget {
   static const String nameRoute = "register_screen";
@@ -13,7 +17,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
@@ -22,82 +26,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           children: [
             Container(
               height: 180,
-              child: Image.asset('images/logo.png'),
+              child: Image.asset(AppAssets.logo),
             ),
             SizedBox(height: 50),
-            TextField(
-              textAlign: TextAlign.center,
+            MyTextField(
+              hintText: AppTexts.hintTextEmail,
               onChanged: (value) {},
-              decoration: InputDecoration(
-                hintText: 'Enter your Email',
-                contentPadding: EdgeInsets.symmetric(
-                  vertical: 10,
-                  horizontal: 20,
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10),
-                  ),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Colors.orange,
-                    width: 1,
-                  ),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10),
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Colors.blue,
-                    width: 2,
-                  ),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10),
-                  ),
-                ),
-              ),
             ),
             SizedBox(height: 8),
-            TextField(
-              textAlign: TextAlign.center,
+            MyTextField(
+              hintText: AppTexts.hintTextPassword,
               onChanged: (value) {},
-              decoration: InputDecoration(
-                hintText: 'Enter your password',
-                contentPadding: EdgeInsets.symmetric(
-                  vertical: 10,
-                  horizontal: 20,
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10),
-                  ),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Colors.orange,
-                    width: 1,
-                  ),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10),
-                  ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Colors.blue,
-                    width: 2,
-                  ),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10),
-                  ),
-                ),
-              ),
             ),
             SizedBox(height: 10),
             MyButton(
-              color: Colors.blue[800]!,
-              title: 'register',
+              color: AppColors.blue[800]!,
+              title: AppTexts.register,
               onPressed: () {},
             )
           ],

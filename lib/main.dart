@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:messageme_app/constants/colors.dart';
 import 'package:messageme_app/screens/registration_screen.dart';
 import 'package:messageme_app/screens/signin_screen.dart';
 import 'screens/welcome_screen.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Message App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: AppColors.blue,
       ),
       initialRoute: WelcomeScreen.nameRoute,
       routes: {
