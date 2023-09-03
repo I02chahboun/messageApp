@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.messageme_app">
+    package="com.helpmate.messageapp">
    <application
         android:label="messageme_app"
         android:icon="@mipmap/ic_launcher">
