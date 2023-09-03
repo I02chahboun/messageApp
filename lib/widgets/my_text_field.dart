@@ -1,21 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:messageme_app/constants/colors.dart';
+import 'package:messageme_app/constants/texts.dart';
 
-class MyTextField extends StatelessWidget {
+class MyTextField extends StatefulWidget {
   final String hintText;
   final Function(String)? onChanged;
-  const MyTextField({required this.hintText, required this.onChanged});
+
+  MyTextField({required this.hintText, required this.onChanged});
+
+  @override
+  State<MyTextField> createState() => _MyTextFieldState();
+}
+
+class _MyTextFieldState extends State<MyTextField> {
+  bool isVisible = true;
 
   @override
   Widget build(BuildContext context) {
+    final bool isPassword = widget.hintText == AppTexts.hintTextPassword;
     return TextField(
-      onChanged: onChanged,
+      obscureText: isObscure(),
+      onChanged: widget.onChanged,
       decoration: InputDecoration(
-        hintText: hintText,
+        hintText: widget.hintText,
         contentPadding: EdgeInsets.symmetric(
           vertical: 10,
           horizontal: 20,
         ),
+        suffixIcon: isPassword
+            ? IconButton(
+                highlightColor: Colors.transparent,
+                onPressed: () {
+                  setState(() {
+                    isVisible = !isVisible;
+                  });
+                },
+                icon: Icon(isVisible ? Icons.visibility : Icons.visibility_off))
+            : null,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(10),
@@ -41,5 +62,9 @@ class MyTextField extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  bool isObscure() {
+    return widget.hintText == AppTexts.hintTextPassword ? isVisible : false;
   }
 }

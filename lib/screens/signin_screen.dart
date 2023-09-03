@@ -14,6 +14,8 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
+  late String email;
+  late String password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,12 +33,16 @@ class _SignInScreenState extends State<SignInScreen> {
             SizedBox(height: 50),
             MyTextField(
               hintText: AppTexts.hintTextEmail,
-              onChanged: (value) {},
+              onChanged: (value) {
+                email = value;
+              },
             ),
             SizedBox(height: 8),
             MyTextField(
               hintText: AppTexts.hintTextPassword,
-              onChanged: (value) {},
+              onChanged: (value) {
+                password = value;
+              },
             ),
             SizedBox(height: 10),
             MyButton(
