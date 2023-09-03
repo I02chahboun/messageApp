@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:messageme_app/screens/registration_screen.dart';
+import 'package:messageme_app/screens/signin_screen.dart';
 import 'package:messageme_app/widgets/my_button.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -40,12 +42,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             MyButton(
               color: Colors.yellow[900]!,
               title: 'Sign in',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, SignInScreen.nameRoute);
+              },
             ),
             MyButton(
               color: Colors.blue[800]!,
               title: 'register',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, RegistrationScreen.nameRoute);
+              },
             )
           ],
         ),
