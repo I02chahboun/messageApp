@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:messageme_app/widgets/my_button.dart';
 
 class WelcomeScreen extends StatefulWidget {
+  static const String nameRoute = "welcome_screen";
   const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
