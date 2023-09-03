@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "292068036142",
+    "project_id": "message-app-f829f",
+    "storage_bucket": "message-app-f829f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292068036142:android:36fd77ba3b6310b0ee59bf",
+        "android_client_info": {
+          "package_name": "com.helpmate.messageapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292068036142-dqjaap7kkn6ufprt30fqssdhvksmd53q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7oJeIQiD_YEC0ujflk-qh1brnNj8DU4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292068036142-dqjaap7kkn6ufprt30fqssdhvksmd53q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
